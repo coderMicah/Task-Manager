@@ -1,5 +1,6 @@
 package com.micah.tasks.mappers.impl;
 
+
 import org.springframework.stereotype.Component;
 
 import com.micah.tasks.domain.dto.TaskDto;
@@ -12,13 +13,16 @@ public class TaskMapperImpl implements TaskMapper {
 
     @Override
     public Task fromDto(TaskDto taskDto) {
+      
+
     return new Task(
                 taskDto.id(),
                 taskDto.title(),
                 taskDto.description(),
                 taskDto.status(),
                 taskDto.taskPriority(),
-                taskDto.dueDate()     
+                taskDto.dueDate(), null
+                // taskDto.taskListId() 
         );
     }
 
@@ -30,7 +34,8 @@ public class TaskMapperImpl implements TaskMapper {
                 task.getDescription(),
                 task.getDueDate(),
                 task.getStatus(),
-                task.getTaskPriority()
+                task.getTaskPriority(),
+                task.getTaskList() != null ? task.getTaskList().getId() : null
         );
     }
     

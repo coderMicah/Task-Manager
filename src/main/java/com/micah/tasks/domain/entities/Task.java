@@ -63,13 +63,14 @@ public class Task {
         // Required by JPA
     }
 
-    public Task(UUID id, String title, String description, TaskStatus status, TaskPriority taskPriority, LocalDateTime dueDate) {
+    public Task(UUID id, String title, String description, TaskStatus status, TaskPriority taskPriority, LocalDateTime dueDate,TaskList taskList) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.status = status;
     this.taskPriority = taskPriority;
     this.dueDate = dueDate;
+    this.taskList = taskList;
 }
 
     // =========================

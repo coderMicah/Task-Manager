@@ -9,5 +9,5 @@ import com.micah.tasks.domain.entities.TaskList;
 
 @Repository
 public interface TaskListRepository extends JpaRepository<TaskList,UUID>{
-
+    
 }

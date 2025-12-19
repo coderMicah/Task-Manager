@@ -51,7 +51,7 @@ public class TaskList {
     // Constructors
     // =========================
 
-    protected TaskList() {
+    public TaskList() {
         // Required by JPA
     }
 
